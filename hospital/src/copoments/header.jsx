@@ -1,7 +1,10 @@
 import logo from "../assets/images/logo.png";
+import { useState } from "react";
 
 function Header(){
-   
+   const [open , setOpen] = useState(false);
+   const [show , setShow] = useState(false);
+
     return(
         <>
            <header className="w-full bg-sky-50 h-[70px] fixed px-4 py-1 z-10 flex flex-row items-center justify-between">  
@@ -10,7 +13,16 @@ function Header(){
                     </div>  
                     <nav className="flex flex-row items-center justify-between gap-4">
                           <p className="text-lg text-sky-900 cursor-pointer font-semibold hover:text-sky-500 transition duration-700 ease-in-out">Home</p>
-                          <p className="text-lg text-sky-900 cursor-pointer font-semibold hover:text-sky-500 transition duration-700 ease-in-out group">Nos services <i className="ri-arrow-down-s-fill"></i></p>
+                          <button className="text-lg text-sky-900 cursor-pointer font-semibold  focus:text-sky-500 transition duration-700 ease-in-out group relative"
+                          onClick={() => setOpen(!open)}>Nos services 
+                              <i className={`inline-block ${ open ? "transform rotate-180 " : " "}  duration-500 ease-in-out ri-arrow-down-s-fill`}></i>
+                              <ul className={`w-3xs items-start flex flex-col absolute top-full left-0 p-3 mt-1 shadow-md 
+                              ${open ? "scale-y-100" : "scale-y-0"} origin-top duration-200`}>
+                                    <li className="hover:text-sky-500"><a href="">Sante de la femme</a></li>
+                                    <li className="hover:text-sky-500"><a href="">Sante mental</a></li>
+                                    <li className="hover:text-sky-500"><a href="">Home</a></li> 
+                              </ul>
+                          </button>
                           <p className="text-lg text-sky-900 cursor-pointer font-semibold hover:text-sky-500 transition duration-700 ease-in-out">A propos de nous</p>
                           <p className="text-lg text-sky-900 cursor-pointer font-semibold hover:text-sky-500 transition duration-700 ease-in-out">Prendre Rendez-vous</p>
                     </nav>    
