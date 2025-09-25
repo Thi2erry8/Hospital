@@ -10,7 +10,7 @@ function Header(){
                     </div>  
                     <nav className="flex flex-row items-center justify-between gap-4">
                           <p className="text-lg text-sky-900 cursor-pointer font-semibold hover:text-sky-500 transition duration-700 ease-in-out">Home</p>
-                          <p className="text-lg text-sky-900 cursor-pointer font-semibold hover:text-sky-500 transition duration-700 ease-in-out">Nos services <i className="ri-arrow-down-s-fill"></i></p>
+                          <p className="text-lg text-sky-900 cursor-pointer font-semibold hover:text-sky-500 transition duration-700 ease-in-out group">Nos services <i className="ri-arrow-down-s-fill"></i></p>
                           <p className="text-lg text-sky-900 cursor-pointer font-semibold hover:text-sky-500 transition duration-700 ease-in-out">A propos de nous</p>
                           <p className="text-lg text-sky-900 cursor-pointer font-semibold hover:text-sky-500 transition duration-700 ease-in-out">Prendre Rendez-vous</p>
                     </nav>    
