@@ -5,15 +5,20 @@ function Home(){
      return(<>
           <Header/>
           
-          <main className="pt-[70px]">
+          <main className=" pt-[70px]">
                  {/* hero */}
-                 <section className="relative w-full min-h-screen flex flex-col items-center">
-                           <div className="absolute w-full h-full hidden">
+                 <section className="relative w-full min-h-screen flex flex-col items-center justify-center bg-sky-50">
+                           <div className="absolute z-[-1] w-full h-full hidden">
                                  <img className="" src={pic1} alt="" />
                            </div>
-                           <div className="">
-                                 <p className=""></p>
-                                 <p className=""></p>
+                           <div className=" text-sky-900 px-3 w-full h-full">
+                                 <h1 className="text-3xl font-bold mb-4">
+                                      Des soins penses pour vous <br /> et votre famille
+                                 </h1>
+                                 <p className="text-lg">
+                                     Une alternative unique qui combine accessibilité, services publics et privés,<br /> 
+                                     avec des tarifs compétitifs pour répondre aux besoins de chacun.
+                                 </p>
                            </div>
 
                  </section>
