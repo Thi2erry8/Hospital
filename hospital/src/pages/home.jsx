@@ -2,6 +2,20 @@ import Header from "../copoments/header";
 import pic1 from "../assets/images/header_pic.jpg";
 
 function Home(){
+
+     const services =[
+          {icon:"",
+           texte_1:"",
+           texte_2:""
+          },
+          {icon:"",
+           texte_1:"",
+           texte_2:""},
+          {icon:"",
+           texte_1:"",
+           texte_2:""}
+     ]
+
      return(<>
           <Header/>
           
@@ -20,6 +34,9 @@ function Home(){
                                      avec des tarifs compétitifs pour répondre aux besoins de chacun.
                                  </p>
                            </div>
+
+                 </section>
+                 <section className="">
 
                  </section>
           </main>
