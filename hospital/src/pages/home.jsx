@@ -26,10 +26,10 @@ function Home(){
                                  <img className="" src={pic1} alt="" />
                            </div>
                            <div className=" text-sky-900 px-3 w-full h-full">
-                                 <h1 className="text-3xl font-bold mb-4">
+                                 <h1 className="text-4xl font-bold mb-4">
                                       Des soins penses pour vous <br /> et votre famille
                                  </h1>
-                                 <p className="text-lg">
+                                 <p className="text-lg font-semibold">
                                      Une alternative unique qui combine accessibilité, services publics et privés,<br /> 
                                      avec des tarifs compétitifs pour répondre aux besoins de chacun.
                                  </p>

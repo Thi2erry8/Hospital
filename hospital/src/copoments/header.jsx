@@ -11,7 +11,7 @@ function Header(){
                     <div className="h-full"> 
                                      <img src={logo} className="h-full" alt="" />
                     </div>  
-                    <nav className={`flex flex-col ${show ?"scale-y-100" :"scale-y-0"} origin-top duration-200 items-start justify-between gap-4 fixed bg-white top-19`}>
+                    <nav className={`flex flex-col ${show ?"scale-y-100" :"scale-y-0"} origin-top duration-200 items-start justify-between gap-4 fixed p-1.5 shadow-lg bg-sky-50 top-19`}>
                           <p className="text-lg text-sky-900 cursor-pointer font-semibold hover:text-sky-500 transition duration-700 ease-in-out">Home</p>
                           <button className="text-lg text-sky-900 cursor-pointer font-semibold  focus:text-sky-500 transition duration-700 ease-in-out group relative"
                           onClick={() => setOpen(!open)}>Nos services 
