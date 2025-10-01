@@ -1,13 +1,16 @@
 import Home from './pages/home'
+import {createBrowserRouter} from "react-router-dom"
 import './App.css'
 
-function App() {
+  const router = createBrowserRouter([])
 
+function App() {
+  
 
   return (
     <>
        <Home/>
-    </>
+    </> 
   )
 }
 
