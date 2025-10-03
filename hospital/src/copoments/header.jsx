@@ -1,5 +1,6 @@
 import logo from "../assets/images/logo.png";
 import { useState } from "react";
+import { Link } from "react-router-dom"
 
 function Header(){
    const [open , setOpen] = useState(false);
@@ -23,7 +24,7 @@ function Header(){
                                     <li className="hover:text-sky-500"><a href="">Home</a></li> 
                               </ul>
                           </button>
-                          <p className="text-lg text-sky-900 cursor-pointer font-semibold hover:text-sky-500 transition duration-700 ease-in-out">A propos de nous</p>
+                          <p className="text-lg text-sky-900 cursor-pointer font-semibold hover:text-sky-500 transition duration-700 ease-in-out"> <Link to="/blog">A propos de nous</Link></p>
                           <p className="text-lg text-sky-900 cursor-pointer font-semibold hover:text-sky-500 transition duration-700 ease-in-out">Prendre Rendez-vous</p>
                     </nav>    
                     <button className="flex items-center h-full text-2xl text-sky-500"
