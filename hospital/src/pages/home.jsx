@@ -3,6 +3,7 @@ import pic1 from "../assets/images/header_pic.jpg";
 import ser1 from "../assets/images/doctor.svg";
 import ser2 from "../assets/images/ambulance.svg";
 import ser3 from "../assets/images/partage.svg";
+import Urgence from "../assets/images/Urgence_mineurs.jpg"
 
 function Home(){
 
@@ -47,7 +48,9 @@ function Home(){
                  <section className="w-full min-h-screen flex flex-col gap-12 items-center justify-center">
                             { services.map((service) =>(
                               <div key={service.id} className="flex flex-row h-1/4 w-8/10 gap-2 shadow-lg shadow-sky-200 p-2 rounded">
-                                    <img className="h-[60px]" src={service.icon} alt="service logo" />
+                                    <div className="flex items-center w-4/10 justify-center">
+                                          <img className="h-[60px]" src={service.icon} alt="service logo" />
+                                    </div>
                                     <div className="flex flex-col gap-2 text-sky-900">
                                           <p className="font-semibold">{service.texte_1}</p>
                                           <p className="">{service.texte_2}</p>
@@ -55,8 +58,22 @@ function Home(){
                               </div>
                             ))}
                  </section>
-                 <section className="w-full min-h-screen ">
-                    
+                 <section className="w-full min-h-screen flex flex-col px-2 gap-2 items-center justify-center">
+                           <div className=" flex flex-col items-start justify-center text-sky-900 gap-2">
+                                
+                                 <h2 className="text-2xl font-semibold">Urgence Mineur</h2>
+                                
+                                 <p className=" "> La Clinique LOTUS, affiliée à la AIC, offre des consultations sans rendez-vous aux patients 
+                                    sans médecin de famille. Les inscriptions se font en ligne via coordonnées (e-mail , Whattsapp etc...) 
+                                    la veille pour un rendez-vous le lendemain. 
+                                    Ce service est entièrement gratuit pour les patients couverts par la AIC. 
+                                 </p>
+
+                           </div> 
+                          
+                           <div className="">
+                                  <img src={Urgence} alt="" />
+                           </div>
                  </section>
           </main>
      </>)  
