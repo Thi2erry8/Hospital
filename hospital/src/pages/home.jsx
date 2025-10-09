@@ -45,6 +45,8 @@ function Home(){
                            </div>
 
                  </section>
+
+                 {/* services */}
                  <section className="w-full min-h-screen flex flex-col gap-12 items-center justify-center">
                             { services.map((service) =>(
                               <div key={service.id} className="flex flex-row h-1/4 w-8/10 gap-2 shadow-lg shadow-sky-200 p-2 rounded">
@@ -58,7 +60,9 @@ function Home(){
                               </div>
                             ))}
                  </section>
-                 <section className="w-full min-h-screen flex flex-col px-2 gap-2 items-center justify-center">
+
+                 {/* Urgences */} 
+                 <section className="w-full min-h-screen flex flex-col-reverse px-2 gap-2 items-center justify-center">
                            <div className=" flex flex-col items-start justify-center text-sky-900 gap-2">
                                 
                                  <h2 className="text-2xl font-semibold">Urgence Mineur</h2>
@@ -69,6 +73,33 @@ function Home(){
                                     Ce service est entièrement gratuit pour les patients couverts par la AIC. 
                                  </p>
 
+                           </div> 
+                          
+                           <div className="">
+                                  <img src={Urgence} alt="" />
+                           </div>
+                 </section>
+
+                 {/* Support */} 
+                 <section className="w-full min-h-screen flex flex-col-reverse px-2 gap-2 items-center justify-center">
+                           <div className=" flex flex-col items-start justify-center text-sky-900 gap-2">
+                                
+                                 <h2 className="text-2xl font-semibold">24/7 Support </h2>
+                                
+                                 <p className=" "> La Clinique LOTUS se met a votre disposition pour vous offrir une assistance  
+                                    a tout heure pour un support immédiat et des questions 
+                                    Nous nous Dedions a offrir le meilleur soutient que possible 
+                                 </p>
+                                  
+                                 <div className="">
+                                       <button>
+
+                                       </button>
+
+                                       <button>
+                                          
+                                       </button>
+                                 </div>
                            </div> 
                           
                            <div className="">
