@@ -4,6 +4,8 @@ import ser1 from "../assets/images/doctor.svg";
 import ser2 from "../assets/images/ambulance.svg";
 import ser3 from "../assets/images/partage.svg";
 import Urgence from "../assets/images/Urgence_mineurs.jpg"
+import Support from "../assets/images/Support.jpg"
+
 
 function Home(){
 
@@ -91,19 +93,44 @@ function Home(){
                                     Nous nous Dedions a offrir le meilleur soutient que possible 
                                  </p>
                                   
-                                 <div className="">
-                                       <button>
+                                 <div className="flex flex-row w-full justify-between">
+                                       <div className="flex flex-row gap-3 border-1 border-sky-200 rounded-md p-2">
+                                               <div className=" flex items-center justify-center">
+                                                     <i class="text-2xl ri-phone-line"></i>
+                                               </div>
 
-                                       </button>
+                                               <div className="flex flex-col gap-2">
+                                                     <p className="font-semibold">
+                                                          Phone Number
+                                                     </p>
 
-                                       <button>
-                                          
-                                       </button>
+                                                     <p>
+                                                         +123 456 78901
+                                                     </p>
+                                               </div> 
+                                       </div>
+
+                                       <div className="flex flex-row gap-3 border-1 border-sky-200 rounded-md p-2">
+                                               <div className=" flex items-center justify-center">
+                                                     <i class="ri-mail-line"></i>
+                                               </div>
+
+                                               <div className="flex flex-col gap-2">
+                                                     <p className="font-semibold">
+                                                          email
+                                                     </p>
+
+                                                     <p>
+                                                         lotus@gmail.com
+                                                     </p>
+                                               </div> 
+                                       </div>
+
                                  </div>
                            </div> 
                           
                            <div className="">
-                                  <img src={Urgence} alt="" />
+                                  <img src={Support} alt="" />
                            </div>
                  </section>
           </main>
