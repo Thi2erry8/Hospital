@@ -1,4 +1,5 @@
 import Header from "../copoments/header";
+import Footer from "../copoments/footer";
 import pic1 from "../assets/images/header_pic.jpg";
 import ser1 from "../assets/images/doctor.svg";
 import ser2 from "../assets/images/ambulance.svg";
@@ -134,6 +135,7 @@ function Home(){
                            </div>
                  </section>
           </main>
+          <Footer/>
      </>)  
 }
 export default Home
