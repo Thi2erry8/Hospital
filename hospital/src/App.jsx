@@ -1,4 +1,5 @@
 import Home from './pages/home'
+import Apropos from './pages/Apropos'
 import {createBrowserRouter , RouterProvider} from "react-router-dom"
 import './App.css'
 
@@ -8,8 +9,8 @@ import './App.css'
       element:  <Home/>
     },
     {
-      path:'/blog',
-      element: <div className="">Blog</div>
+      path:'/Apropos',
+      element: <Apropos/>
     },
     {
       path:'/services',
