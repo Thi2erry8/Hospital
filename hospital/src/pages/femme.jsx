@@ -1,6 +1,8 @@
 import pic1 from "../assets/images/header_pic.jpg";
 import Header from "../copoments/header";
 import Footer from "../copoments/footer";
+import Option from "../copoments/option";
+import { useState } from "react";
 
 export default function Femme() {
 
@@ -36,7 +38,12 @@ const services = [
       desc: "Discussion et suivi autour des options contraceptives (pilule, injection, stérilet, etc.), selon vos besoins et préférences.",
     },
   ];
+ 
+  const [openId, setOpenId] = useState(null);
 
+  const toggle = (id) => {
+    setOpenId(openId === id ? null : id);
+  };
 
   return (
     <>
@@ -54,8 +61,8 @@ const services = [
 
             </section>
            
-            <section className="min-h-screen w-screen flex flex-col px-2 pt-3">
-                      <div className="flex flex-col text-lg gap-2 w-full text-sky-900">
+            <section className="min-h-screen gap-4 w-screen flex flex-col  pt-3">
+                      <div className="flex flex-col text-lg gap-2 w-full text-sky-900 px-2">
                              <p>
                                  À la Clinique de santé M, nous offrons une gamme complète de services en santé de la femme, 
                                  assurés par nos médecins de famille et infirmières praticiennes spécialisées (IPS). Que ce soit pour un 
@@ -73,19 +80,12 @@ const services = [
                              </p>
                       </div>
 
-                      <div className="flex flex-col gap-2 w-full bg-sky-200 text-sky-900">
-                          <div className="">
-                                  <div className="">
-                                        <button>Biopsie de l'endomètre</button>
-                                        <i class="ri-arrow-down-line"></i>                            
-                                  </div>
-                               
-                                  <div className="">
-                                       <p className="">
-                                           Prélèvement de tissu utérin pour analyse, généralement dans le cadre de saignements vaginaux anormaux. 
-                                      </p>
-                                 </div>                            
-                          </div>
+                      <div className="flex flex-col gap-5 w-full  text-sky-900">
+                             {services.map((service) => (
+                               <Option id={service.id} title={service.title} desc={service.desc} openId={openId} toggle={toggle}/>
+                             ))
+
+                             }
 
                       </div>
             </section>
