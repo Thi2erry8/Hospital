@@ -1,5 +1,6 @@
 import Home from './pages/home'
 import Apropos from './pages/Apropos'
+import Femme from './pages/femme'
 import {createBrowserRouter , RouterProvider} from "react-router-dom"
 import './App.css'
 
@@ -13,8 +14,8 @@ import './App.css'
       element: <Apropos/>
     },
     {
-      path:'/services',
-      element: <div className="">services</div>
+      path:'/femme',
+      element: <Femme/>
     }
   ])
 

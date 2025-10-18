@@ -26,9 +26,9 @@ function Footer(){
                   </div>
 
                   <div className="flex flex-row gap-4">
-                         <i class="text-2xl text-sky-900 ri-facebook-line"></i>
-                         <i class="text-2xl text-sky-900 ri-instagram-line"></i>
-                         <i class="text-2xl text-sky-900 ri-twitter-fill"></i>
+                         <i className="text-2xl text-sky-900 ri-facebook-line"></i>
+                         <i className="text-2xl text-sky-900 ri-instagram-line"></i>
+                         <i className="text-2xl text-sky-900 ri-twitter-fill"></i>
                   </div>
          </footer>
        )
