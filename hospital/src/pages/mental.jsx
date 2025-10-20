@@ -64,19 +64,18 @@ export default function mental() {
             <section className="min-h-screen gap-4 w-screen flex flex-col  pt-3">
                       <div className="flex flex-col text-lg gap-2 w-full text-sky-900 px-2">
                              <p>
-                                 À la Clinique de santé M, nous offrons une gamme complète de services en santé de la femme, 
-                                 assurés par nos médecins de famille et infirmières praticiennes spécialisées (IPS). Que ce soit pour un 
-                                 suivi gynécologique, une contraception personnalisée ou des examens préventifs
-                                 , notre équipe vous accompagne avec écoute, respect et professionnalisme.
+                                  La Clinique de santé M offre des services spécialisés en santé mentale pour les enfants, les adolescents et les adultes. Notre équipe interdisciplinaire, 
+                                  composée de psychologues, neuropsychologues, infirmières praticiennes spécialisées en santé mentale (IPSSM) et médecins, 
+                                  propose une approche humaine et rigoureuse.
                              </p>
 
                              <p>
-                                 Nous proposons des consultations accessibles et confidentielles pour les femmes de tous âges,
-                                 dans un environnement sécuritaire et sans jugement.
+                                  Notre objectif : offrir un accès rapide à des services en santé mentale de qualité, pour permettre 
+                                  une prise en charge précoce, un meilleur suivi et un bien-être durable.
                              </p>
 
                              <p>
-                                 Consultez la section tarifs pour plus de détails sur nos services en santé féminine.
+                                 Consultez la section tarifs pour tous les détails sur nos évaluations en TDAH et santé mentale.
                              </p>
                       </div>
 
