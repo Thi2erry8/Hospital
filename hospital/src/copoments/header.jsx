@@ -17,17 +17,17 @@ function Header(){
                           <button className="text-lg text-sky-900 cursor-pointer font-semibold  focus:text-sky-500 transition duration-700 ease-in-out group relative"
                           onClick={() => setOpen(!open)}>Nos services 
                               <i className={`inline-block ${ open ? "transform rotate-180 " : " "}  duration-500 ease-in-out ri-arrow-down-s-fill`}></i>
-                              <ul className={`w-3xs bg-sky-50 items-start flex flex-col absolute top-full left-0 p-3 mt-1 shadow-md 
+                              <ul className={`w-3xs bg-sky-50 gap-4 items-start flex flex-col absolute top-full left-0 p-3 mt-1 shadow-md 
                               ${open ? "scale-y-100" : "scale-y-0 hidden"} origin-top duration-200`}>
-                                    <li className="hover:text-sky-500"><Link to="/femme">Sante de la femme</Link></li>
-                                    <li className="hover:text-sky-500"><a href="">Sante mental</a></li>
-                                    <li className="hover:text-sky-500"><a href="">Home</a></li> 
+                                    <li className="hover:text-sky-900"><Link to="/femme">Sante de la femme</Link></li>
+                                    <li className="hover:text-sky-900"><Link to="/mental">Sante mental</Link></li>
+                                    <li className="hover:text-sky-900"><a href="">Home</a></li> 
                               </ul>
                           </button>
                           <p className="text-lg text-sky-900 cursor-pointer font-semibold hover:text-sky-500 transition duration-700 ease-in-out"> <Link to="/Apropos">A propos de nous</Link></p>
                           <p className="text-lg text-sky-900 cursor-pointer font-semibold hover:text-sky-500 transition duration-700 ease-in-out">Prendre Rendez-vous</p>
                     </nav>    
-                    <button className="flex items-center h-full text-2xl text-sky-500"
+                    <button className="flex items-center h-full text-2xl text-sky-500 cursor-pointer"
                     onClick={() => setShow(!show)}>
                           <i className={` ${show ?"ri-close-line":"ri-menu-line"} `}></i>
                     </button> 

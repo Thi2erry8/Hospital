@@ -4,38 +4,37 @@ import Footer from "../copoments/footer";
 import Option from "../copoments/option";
 import { useState } from "react";
 
-export default function mental() {
-
+export default function Mental(){
     const services = [
     {
       id: 1,
-      title: "Biopsie de l'endomètre",
-      desc: "Prélèvement de tissu utérin pour analyse, généralement dans le cadre de saignements vaginaux anormaux.",
+      title: "Évaluation TDAH",
+      desc: "Le TDA/H est le trouble déficitaire de l'attention avec ou sans l'hyperactivité. Il s'agit d'une diagnostic complexe à poser et nécessite une évaluation approfondie pour le soutenir. Le TDA/H est de plus en plus présent au Québec. Il faut se questionner sur le réel diagnostic du TDA/H ou ses symptômes qui peuvent être pris en charge différement. Le traitement est varié et ne nécessite pas obligatoirement une médication !",
     },
     {
       id: 2,
-      title: "Installation ou retrait de stérilet",
-      desc: "Pose ou retrait d’un dispositif intra-utérin, avec ou sans hormone.Nécessite une première rencontre avec le médecin ou IPSPL si vous n’avez pas votre prescription.Si vous avez déjà une prescription, vous devez apporter le stérilet prescrit lors de ce rendez-vous. ",
+      title: "Évaluation pédopsychiatrique",
+      desc: "Rencontre avec un médecin ou une IPSSM pour évaluer la santé mentale et le développement psychologique d’un enfant ou d’un adolescent.",
     },
     {
       id: 3,
-      title: "Installation de l'implant contraceptif",
-      desc: "Pose de l’implant contraceptif sous-cutané, efficace pour une durée de trois ans. Si vous n'avez pas déjà de prescription, une consultation médicale est nécessaire au préalable. Si vous avez votre prescription, vous devrez apporter votre implant au rendez-vous d'installation.",
+      title: "Psychologue",
+      desc: "La Dre Marie-France Leblanc, psychologue, offre un accompagnement bienveillant et professionnel pour vous aider à traverser les défis du quotidien. Ses services sont accessibles rapidement, en clinique ou en consultation virtuelle.",
     },
     {
       id: 4,
-      title: "Examen gynécologique – Cytologie – Test PAP",
-      desc: "Le dépistage du cancer du col de l'utérus, généralement appelé Test PAP, est conseillé aux deux ans chez les femmes qui sont ou ont déjà été actives sexuellement. Dès l'âge de 21 ans, il est important de faire ce dépistage pour prévenir l'apparition et le développement de cellules anormales pouvant conduire à un cancer. ",
+      title: "Neuropsychologue",
+      desc: "Le service de neuropsychologie s’adresse aux enfants et adolescents qui présentent des difficultés d’attention, de mémoire, d’apprentissage ou d’adaptation dans leur environnement scolaire ou familial. Grâce à une évaluation approfondie des fonctions cognitives, nous pouvons poser un portrait précis du fonctionnement neurologique et proposer des pistes d’intervention adaptées aux besoins réels de l’enfant, en collaboration avec les parents et les intervenants du milieu.",
     },
     {
       id: 5,
-      title: "Entretien du pessaire",
-      desc: "Nettoyage et vérification du pessaire pour les patientes qui en portent, dans un cadre respectueux et bienveillant.",
+      title: "Consultation IPSSM",
+      desc: "Les IPSSM sont des infirmières possédant une formation universitaire de 2e cycle qui peuvent diagnostiquer les problèmes de santé mentale et les troubles mentaux. Les IPSSM possèdent la formation et l’habilitation pour évaluer une clientèle de tout âge incluant le diagnostic, le traitement et le suivi médical nécessaire. ",
     },
         {
       id: 6,
-      title: "Contraception",
-      desc: "Discussion et suivi autour des options contraceptives (pilule, injection, stérilet, etc.), selon vos besoins et préférences.",
+      title: "Évaluation du trouble du spectre de l’autisme (TSA) chez l’adulte",
+      desc: "La Clinique M offre désormais l’évaluation du trouble du spectre de l’autisme (TSA) pour adultes, réalisée par la psychologue Dre Marie-France Leblanc, directement en clinique à Trois-Rivières.L’approche de Dre Leblanc repose sur l’écoute, la bienveillance et le respect de chaque parcours. Que ce soit pour répondre à des questionnements personnels ou pour officialiser un diagnostic, l’évaluation constitue une démarche importante et constructive.",
     },
   ];
 
@@ -55,7 +54,7 @@ export default function mental() {
                            </div>
                            <div className=" text-sky-900 px-3 w-full h-fit">
                                  <h1 className="text-4xl font-bold mb-4">
-                                      Santé de la femme
+                                      Santé mental et TDAH
                                  </h1>
                            </div>
 
