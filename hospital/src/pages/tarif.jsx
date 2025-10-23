@@ -10,7 +10,7 @@ export default function Tarif(){
   const [openIndex, setOpenIndex] = useState(null);
 
   const handleToggle = (index) => {
-    setOpenIndex(penIndex === index ? null : index);
+    setOpenIndex(openIndex === index ? null : index);
   };
   
     return (
@@ -58,7 +58,7 @@ export default function Tarif(){
                        <div className=" p-3">
                             <button onClick={() => handleToggle(0)}
                                     className="flex justify-between w-full text-left font-semibold text-sky-900">
-                                    <span>Biopsie de l'endomètre</span>
+                                    <span>Forfaits et frais administratifs</span>
                                     <i className={`ri-arrow-down-line transition duration-200 ${openIndex === 0 ? "rotate-180" : ""}`}></i>
                            </button>
 
@@ -125,47 +125,47 @@ export default function Tarif(){
                           </div>
                              </div>
 
-
+                                {/* Élément 2 */}                                 
                   <div className=" p-3">
                            <button onClick={() => handleToggle(1)}
                                    className="flex justify-between w-full text-left font-semibold text-sky-900">
-                                   <span>Échographie pelvienne</span>
+                                   <span>Sante de la femme</span>
                                    <i className={`ri-arrow-down-line transition duration-200 ${openIndex === 1 ? "rotate-180" : ""}`}></i>
                           </button>
 
                           <div className={`flex flex-col mt-3 transition duration-200 overflow-hidden ${openIndex ===1 ? "max-h-fit gap-3":"max-h-0 opacity-0"}`}>
                                   <div className=" flex flex-row justify-between items-center">
                                           <p className="mt-2 text-sky-900">
-                                             Frais d'inscription 
+                                             Examen gynécologique - Test PAP (Cytologie) 
                                          </p>
                                          <p className="mt-2 text-sky-900">
-                                              5000Gdes
+                                              8000Gdes
                                          </p>
 
                                   </div>
                                   <div className=" flex flex-row justify-between items-center">
                                           <p className="mt-2 text-sky-900">
-                                             Frais d'abonnement annuel 
+                                             Installation de stérilet3 
                                          </p>
                                          <p className="mt-2 text-sky-900">
-                                              1500Gdes
+                                              5500Gdes
                                          </p>
 
                                   </div>
                                   
                                   <div className=" flex flex-row justify-between items-center">
                                           <p className="mt-2 text-sky-900">
-                                             Forfait individuel - Prise en charge simple 
+                                             Retrait de stérilet
                                          </p>
                                          <p className="mt-2 text-sky-900">
-                                              12500Gdes
+                                              4500Gdes
                                          </p>
 
                                   </div>
 
                                   <div className=" flex flex-row justify-between items-center">
                                           <p className="mt-2 text-sky-900">
-                                             Forfait familial - Prise en charge familiale 
+                                             Consultation en hormonothérapie féminine-suivi 
                                          </p>
                                          <p className="mt-2 text-sky-900">
                                               10000Gdes
@@ -175,23 +175,14 @@ export default function Tarif(){
 
                                   <div className=" flex flex-row justify-between items-center">
                                           <p className="mt-2 text-sky-900">
-                                             Forfait pédiatrique - 4 consultations 
+                                             Consultation en hormonothérapie féminine - suivi  
                                          </p>
                                          <p className="mt-2 text-sky-900">
-                                              7500Gdes
+                                              8000Gdes
                                          </p>
 
                                   </div>
 
-                                  <div className=" flex flex-row justify-between items-center">
-                                          <p className="mt-2 text-sky-900">
-                                             Forfait pédiatrique - 8 consultations 
-                                         </p>
-                                         <p className="mt-2 text-sky-900">
-                                              12500Gdes
-                                         </p>
-
-                                  </div>
 
                           </div>
 
