@@ -1,16 +1,15 @@
 import pic1 from "../assets/images/header_pic.jpg";
 import Header from "../copoments/header";
 import Footer from "../copoments/footer";
-import Option from "../copoments/option";
 import { useState } from "react";
 
 export default function Tarif(){
 
 
-   const [openId, setOpenId] = useState(null);
+  const [openIndex, setOpenIndex] = useState(null);
 
-  const toggle = (id) => {
-    setOpenId(openId === id ? null : id);
+  const handleToggle = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
   };
   
     return (
@@ -23,7 +22,7 @@ export default function Tarif(){
                            </div>
                            <div className=" text-sky-900 px-3 w-full h-fit">
                                  <h1 className="text-4xl font-bold mb-4">
-                                      Santé mental et TDAH
+                                      Tarif
                                  </h1>
                            </div>
 
@@ -53,6 +52,150 @@ export default function Tarif(){
                              ))
 
                              } */}
+
+                                 {/* Élément 1 */}
+                       <div className=" p-3">
+                            <button onClick={() => handleToggle(0)}
+                                    className="flex justify-between w-full text-left font-semibold text-sky-900">
+                                    <span>Biopsie de l'endomètre</span>
+                                    <i className={`ri-arrow-down-line transition duration-200 ${openIndex === 0 ? "rotate-180" : ""}`}></i>
+                           </button>
+
+                          <div className={`flex flex-col mt-3  transition duration-200 overflow-hidden ${openIndex ===0 ? "max-h-fit gap-3":"max-h-0 opacity-0"}`}>
+                                  <div className=" flex flex-row justify-between items-center">
+                                          <p className="mt-2 text-sky-900">
+                                             Frais d'inscription 
+                                         </p>
+                                         <p className="mt-2 text-sky-900">
+                                              5000Gdes
+                                         </p>
+
+                                  </div>
+                                  <div className=" flex flex-row justify-between items-center">
+                                          <p className="mt-2 text-sky-900">
+                                             Frais d'abonnement annuel 
+                                         </p>
+                                         <p className="mt-2 text-sky-900">
+                                              1500Gdes
+                                         </p>
+
+                                  </div>
+                                  
+                                  <div className=" flex flex-row justify-between items-center">
+                                          <p className="mt-2 text-sky-900">
+                                             Forfait individuel - Prise en charge simple 
+                                         </p>
+                                         <p className="mt-2 text-sky-900">
+                                              12500Gdes
+                                         </p>
+
+                                  </div>
+
+                                  <div className=" flex flex-row justify-between items-center">
+                                          <p className="mt-2 text-sky-900">
+                                             Forfait familial - Prise en charge familiale 
+                                         </p>
+                                         <p className="mt-2 text-sky-900">
+                                              10000Gdes
+                                         </p>
+
+                                  </div>
+
+                                  <div className=" flex flex-row justify-between items-center">
+                                          <p className="mt-2 text-sky-900">
+                                             Forfait pédiatrique - 4 consultations 
+                                         </p>
+                                         <p className="mt-2 text-sky-900">
+                                              7500Gdes
+                                         </p>
+
+                                  </div>
+
+                                  <div className=" flex flex-row justify-between items-center">
+                                          <p className="mt-2 text-sky-900">
+                                             Forfait pédiatrique - 8 consultations 
+                                         </p>
+                                         <p className="mt-2 text-sky-900">
+                                              12500Gdes
+                                         </p>
+
+                                  </div>
+
+                          </div>
+                             </div>
+
+
+                  <div className=" p-3">
+                           <button onClick={() => handleToggle(1)}
+                                   className="flex justify-between w-full text-left font-semibold text-sky-900">
+                                   <span>Échographie pelvienne</span>
+                                   <i className={`ri-arrow-down-line transition duration-200 ${openIndex === 1 ? "rotate-180" : ""}`}></i>
+                          </button>
+
+                          <div className={`flex flex-col mt-3 transition duration-200 overflow-hidden ${openIndex ===1 ? "max-h-fit gap-3":"max-h-0 opacity-0"}`}>
+                                  <div className=" flex flex-row justify-between items-center">
+                                          <p className="mt-2 text-sky-900">
+                                             Frais d'inscription 
+                                         </p>
+                                         <p className="mt-2 text-sky-900">
+                                              5000Gdes
+                                         </p>
+
+                                  </div>
+                                  <div className=" flex flex-row justify-between items-center">
+                                          <p className="mt-2 text-sky-900">
+                                             Frais d'abonnement annuel 
+                                         </p>
+                                         <p className="mt-2 text-sky-900">
+                                              1500Gdes
+                                         </p>
+
+                                  </div>
+                                  
+                                  <div className=" flex flex-row justify-between items-center">
+                                          <p className="mt-2 text-sky-900">
+                                             Forfait individuel - Prise en charge simple 
+                                         </p>
+                                         <p className="mt-2 text-sky-900">
+                                              12500Gdes
+                                         </p>
+
+                                  </div>
+
+                                  <div className=" flex flex-row justify-between items-center">
+                                          <p className="mt-2 text-sky-900">
+                                             Forfait familial - Prise en charge familiale 
+                                         </p>
+                                         <p className="mt-2 text-sky-900">
+                                              10000Gdes
+                                         </p>
+
+                                  </div>
+
+                                  <div className=" flex flex-row justify-between items-center">
+                                          <p className="mt-2 text-sky-900">
+                                             Forfait pédiatrique - 4 consultations 
+                                         </p>
+                                         <p className="mt-2 text-sky-900">
+                                              7500Gdes
+                                         </p>
+
+                                  </div>
+
+                                  <div className=" flex flex-row justify-between items-center">
+                                          <p className="mt-2 text-sky-900">
+                                             Forfait pédiatrique - 8 consultations 
+                                         </p>
+                                         <p className="mt-2 text-sky-900">
+                                              12500Gdes
+                                         </p>
+
+                                  </div>
+
+                          </div>
+
+                         </div>
+          
 
                       </div>
             </section>
