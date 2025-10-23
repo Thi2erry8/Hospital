@@ -1,47 +1,16 @@
 import pic1 from "../assets/images/header_pic.jpg";
 import Header from "../copoments/header";
 import Footer from "../copoments/footer";
-import Option from "../copoments/option";
 import { useState } from "react";
 
-export default function Mental(){
-    const services = [ 
-    {
-      id: 1,
-      title: "Évaluation TDAH",
-      desc: "Le TDA/H est le trouble déficitaire de l'attention avec ou sans l'hyperactivité. Il s'agit d'une diagnostic complexe à poser et nécessite une évaluation approfondie pour le soutenir. Le TDA/H est de plus en plus présent au Québec. Il faut se questionner sur le réel diagnostic du TDA/H ou ses symptômes qui peuvent être pris en charge différement. Le traitement est varié et ne nécessite pas obligatoirement une médication !",
-    },
-    {
-      id: 2,
-      title: "Évaluation pédopsychiatrique",
-      desc: "Rencontre avec un médecin ou une IPSSM pour évaluer la santé mentale et le développement psychologique d’un enfant ou d’un adolescent.",
-    },
-    {
-      id: 3,
-      title: "Psychologue",
-      desc: "La Dre Marie-France Leblanc, psychologue, offre un accompagnement bienveillant et professionnel pour vous aider à traverser les défis du quotidien. Ses services sont accessibles rapidement, en clinique ou en consultation virtuelle.",
-    },
-    {
-      id: 4,
-      title: "Neuropsychologue",
-      desc: "Le service de neuropsychologie s’adresse aux enfants et adolescents qui présentent des difficultés d’attention, de mémoire, d’apprentissage ou d’adaptation dans leur environnement scolaire ou familial. Grâce à une évaluation approfondie des fonctions cognitives, nous pouvons poser un portrait précis du fonctionnement neurologique et proposer des pistes d’intervention adaptées aux besoins réels de l’enfant, en collaboration avec les parents et les intervenants du milieu.",
-    },
-    {
-      id: 5,
-      title: "Consultation IPSSM",
-      desc: "Les IPSSM sont des infirmières possédant une formation universitaire de 2e cycle qui peuvent diagnostiquer les problèmes de santé mentale et les troubles mentaux. Les IPSSM possèdent la formation et l’habilitation pour évaluer une clientèle de tout âge incluant le diagnostic, le traitement et le suivi médical nécessaire. ",
-    },
-        {
-      id: 6,
-      title: "Évaluation du trouble du spectre de l’autisme (TSA) chez l’adulte",
-      desc: "La Clinique M offre désormais l’évaluation du trouble du spectre de l’autisme (TSA) pour adultes, réalisée par la psychologue Dre Marie-France Leblanc, directement en clinique à Trois-Rivières.L’approche de Dre Leblanc repose sur l’écoute, la bienveillance et le respect de chaque parcours. Que ce soit pour répondre à des questionnements personnels ou pour officialiser un diagnostic, l’évaluation constitue une démarche importante et constructive.",
-    },
-  ];
 
-   const [openId, setOpenId] = useState(null);
+export default function Tarif(){
 
-  const toggle = (id) => {
-    setOpenId(openId === id ? null : id);
+
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const handleToggle = (index) => {
+    setOpenIndex(penIndex === index ? null : index);
   };
   
     return (
@@ -54,7 +23,7 @@ export default function Mental(){
                            </div>
                            <div className=" text-sky-900 px-3 w-full h-fit">
                                  <h1 className="text-4xl font-bold mb-4">
-                                      Santé mental et TDAH
+                                      Tarif
                                  </h1>
                            </div>
 
@@ -79,11 +48,155 @@ export default function Mental(){
                       </div>
 
                       <div className="flex flex-col gap-5 w-full  text-sky-900">
-                             {services.map((service) => (
+                             {/* {services.map((service) => (
                                <Option id={service.id} title={service.title} desc={service.desc} openId={openId} toggle={toggle}/>
                              ))
 
-                             }
+                             } */}
+
+                                 {/* Élément 1 */}
+                       <div className=" p-3">
+                            <button onClick={() => handleToggle(0)}
+                                    className="flex justify-between w-full text-left font-semibold text-sky-900">
+                                    <span>Biopsie de l'endomètre</span>
+                                    <i className={`ri-arrow-down-line transition duration-200 ${openIndex === 0 ? "rotate-180" : ""}`}></i>
+                           </button>
+
+                          <div className={`flex flex-col mt-3  transition duration-200 overflow-hidden ${openIndex ===0 ? "max-h-fit gap-3":"max-h-0 opacity-0"}`}>
+                                  <div className=" flex flex-row justify-between items-center">
+                                          <p className="mt-2 text-sky-900">
+                                             Frais d'inscription 
+                                         </p>
+                                         <p className="mt-2 text-sky-900">
+                                              5000Gdes
+                                         </p>
+
+                                  </div>
+                                  <div className=" flex flex-row justify-between items-center">
+                                          <p className="mt-2 text-sky-900">
+                                             Frais d'abonnement annuel 
+                                         </p>
+                                         <p className="mt-2 text-sky-900">
+                                              1500Gdes
+                                         </p>
+
+                                  </div>
+                                  
+                                  <div className=" flex flex-row justify-between items-center">
+                                          <p className="mt-2 text-sky-900">
+                                             Forfait individuel - Prise en charge simple 
+                                         </p>
+                                         <p className="mt-2 text-sky-900">
+                                              12500Gdes
+                                         </p>
+
+                                  </div>
+
+                                  <div className=" flex flex-row justify-between items-center">
+                                          <p className="mt-2 text-sky-900">
+                                             Forfait familial - Prise en charge familiale 
+                                         </p>
+                                         <p className="mt-2 text-sky-900">
+                                              10000Gdes
+                                         </p>
+
+                                  </div>
+
+                                  <div className=" flex flex-row justify-between items-center">
+                                          <p className="mt-2 text-sky-900">
+                                             Forfait pédiatrique - 4 consultations 
+                                         </p>
+                                         <p className="mt-2 text-sky-900">
+                                              7500Gdes
+                                         </p>
+
+                                  </div>
+
+                                  <div className=" flex flex-row justify-between items-center">
+                                          <p className="mt-2 text-sky-900">
+                                             Forfait pédiatrique - 8 consultations 
+                                         </p>
+                                         <p className="mt-2 text-sky-900">
+                                              12500Gdes
+                                         </p>
+
+                                  </div>
+
+                          </div>
+                             </div>
+
+
+                  <div className=" p-3">
+                           <button onClick={() => handleToggle(1)}
+                                   className="flex justify-between w-full text-left font-semibold text-sky-900">
+                                   <span>Échographie pelvienne</span>
+                                   <i className={`ri-arrow-down-line transition duration-200 ${openIndex === 1 ? "rotate-180" : ""}`}></i>
+                          </button>
+
+                          <div className={`flex flex-col mt-3 transition duration-200 overflow-hidden ${openIndex ===1 ? "max-h-fit gap-3":"max-h-0 opacity-0"}`}>
+                                  <div className=" flex flex-row justify-between items-center">
+                                          <p className="mt-2 text-sky-900">
+                                             Frais d'inscription 
+                                         </p>
+                                         <p className="mt-2 text-sky-900">
+                                              5000Gdes
+                                         </p>
+
+                                  </div>
+                                  <div className=" flex flex-row justify-between items-center">
+                                          <p className="mt-2 text-sky-900">
+                                             Frais d'abonnement annuel 
+                                         </p>
+                                         <p className="mt-2 text-sky-900">
+                                              1500Gdes
+                                         </p>
+
+                                  </div>
+                                  
+                                  <div className=" flex flex-row justify-between items-center">
+                                          <p className="mt-2 text-sky-900">
+                                             Forfait individuel - Prise en charge simple 
+                                         </p>
+                                         <p className="mt-2 text-sky-900">
+                                              12500Gdes
+                                         </p>
+
+                                  </div>
+
+                                  <div className=" flex flex-row justify-between items-center">
+                                          <p className="mt-2 text-sky-900">
+                                             Forfait familial - Prise en charge familiale 
+                                         </p>
+                                         <p className="mt-2 text-sky-900">
+                                              10000Gdes
+                                         </p>
+
+                                  </div>
+
+                                  <div className=" flex flex-row justify-between items-center">
+                                          <p className="mt-2 text-sky-900">
+                                             Forfait pédiatrique - 4 consultations 
+                                         </p>
+                                         <p className="mt-2 text-sky-900">
+                                              7500Gdes
+                                         </p>
+
+                                  </div>
+
+                                  <div className=" flex flex-row justify-between items-center">
+                                          <p className="mt-2 text-sky-900">
+                                             Forfait pédiatrique - 8 consultations 
+                                         </p>
+                                         <p className="mt-2 text-sky-900">
+                                              12500Gdes
+                                         </p>
+
+                                  </div>
+
+                          </div>
+
+                         </div>
+          
 
                       </div>
             </section>

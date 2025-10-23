@@ -2,6 +2,7 @@ import Home from './pages/home'
 import Apropos from './pages/Apropos'
 import Femme from './pages/femme'
 import Mental from './pages/mental'
+import Tarif from './pages/tarif'
 import {createBrowserRouter , RouterProvider} from "react-router-dom"
 import './App.css'
 
@@ -11,7 +12,7 @@ import './App.css'
       element:  <Home/>
     },
     {
-      path:'/Apropos',
+      path:'/apropos',
       element: <Apropos/>
     },
     {
@@ -21,6 +22,10 @@ import './App.css'
     {
       path:'/mental',
       element: <Mental/>
+    },
+    {
+      path:'/tarif',
+      element: <Tarif/>
     }
   ])
 
