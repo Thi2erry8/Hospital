@@ -2,10 +2,15 @@ import pic1 from "../assets/images/header_pic.jpg";
 import Header from "../copoments/header";
 import Footer from "../copoments/footer";
 import { useState } from "react";
+import Hero from "../copoments/hero";
 
 
 export default function Tarif(){
-
+  
+  const text ={
+        img : pic1,
+        title : "Tarif"
+  };
 
   const [openIndex, setOpenIndex] = useState(null);
 
@@ -17,19 +22,9 @@ export default function Tarif(){
     <>
 <Header></Header>
     <main className=" pt-[70px]">
-                 <section className="relative h-[40vh] w-full flex flex-col items-center justify-center bg-sky-200">
-                           <div className="absolute z-[-1] w-full h-full hidden">
-                                 <img className="" src={pic1} alt="" />
-                           </div>
-                           <div className=" text-sky-900 px-3 w-full h-fit">
-                                 <h1 className="text-4xl font-bold mb-4">
-                                      Tarif
-                                 </h1>
-                           </div>
-
-            </section>
+                 <Hero img={text.img} title={text.title}></Hero>
            
-            <section className="min-h-screen gap-4 w-screen flex flex-col  pt-3">
+            <section className="min-h-screen gap-4 w-screen flex flex-col  p-3">
                       <div className="flex flex-col text-lg gap-2 w-full text-sky-900 px-2">
                              <p>
                                   Les frais d'abonnement annuel s'appliquent lors de la première consultation de 

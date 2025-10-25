@@ -3,8 +3,16 @@ import Header from "../copoments/header";
 import Footer from "../copoments/footer";
 import Option from "../copoments/option";
 import { useState } from "react";
+import Hero from "../copoments/hero";
+import Hero from "../copoments/hero";
 
 export default function Mental(){
+  
+  const text ={
+          img : pic1,
+          title : "Santé mental et TDAH"
+    };
+
     const services = [
     {
       id: 1,
@@ -48,17 +56,7 @@ export default function Mental(){
     <>
 <Header></Header>
     <main className=" pt-[70px]">
-                 <section className="relative h-[40vh] w-full flex flex-col items-center justify-center bg-sky-200">
-                           <div className="absolute z-[-1] w-full h-full hidden">
-                                 <img className="" src={pic1} alt="" />
-                           </div>
-                           <div className=" text-sky-900 px-3 w-full h-fit">
-                                 <h1 className="text-4xl font-bold mb-4">
-                                      Santé mental et TDAH
-                                 </h1>
-                           </div>
-
-            </section>
+                 <Hero img={text.img} title={text.title}></Hero>
            
             <section className="min-h-screen gap-4 w-screen flex flex-col  pt-3">
                       <div className="flex flex-col text-lg gap-2 w-full text-sky-900 px-2">
