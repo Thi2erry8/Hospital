@@ -32,19 +32,19 @@ export default function Tarif(){
             <section className="min-h-screen gap-4 w-screen flex flex-col  pt-3">
                       <div className="flex flex-col text-lg gap-2 w-full text-sky-900 px-2">
                              <p>
-                                  La Clinique de santé M offre des services spécialisés en santé mentale pour les enfants, les adolescents et les adultes. Notre équipe interdisciplinaire, 
-                                  composée de psychologues, neuropsychologues, infirmières praticiennes spécialisées en santé mentale (IPSSM) et médecins, 
-                                  propose une approche humaine et rigoureuse.
+                                  Les frais d'abonnement annuel s'appliquent lors de la première consultation de 
+                                  l'année en cours, à tous les clients, sauf ceux ayant un forfait annuel.
                              </p>
 
                              <p>
-                                  Notre objectif : offrir un accès rapide à des services en santé mentale de qualité, pour permettre 
-                                  une prise en charge précoce, un meilleur suivi et un bien-être durable.
+                                  Aux bénéficiaires de la AIC. 
+                                  Nous vous avisons que les médecins pratiquant à la Clinique LOTUS sont des professionnels 
+                                  non participants de la AIC . Si vous avez recours à leurs services 
+                                  professionnels, vous devrez donc payer directement le coût des services qu’ils vous fourniront. 
+                                  Vous ne pourrez ni demander, ni obtenir de la AIC le remboursement 
+                                  du coût des services assurés que vous leur avez payé.
                              </p>
 
-                             <p>
-                                 Consultez la section tarifs pour tous les détails sur nos évaluations en TDAH et santé mentale.
-                             </p>
                       </div>
 
                       <div className="flex flex-col gap-5 w-full  text-sky-900">
@@ -58,7 +58,7 @@ export default function Tarif(){
                        <div className=" p-3">
                             <button onClick={() => handleToggle(0)}
                                     className="flex justify-between w-full text-left font-semibold text-sky-900">
-                                    <span>Forfaits et frais administratifs</span>
+                                    <span className="text-lg">Forfaits et frais administratifs</span>
                                     <i className={`ri-arrow-down-line transition duration-200 ${openIndex === 0 ? "rotate-180" : ""}`}></i>
                            </button>
 
@@ -129,7 +129,7 @@ export default function Tarif(){
                   <div className=" p-3">
                            <button onClick={() => handleToggle(1)}
                                    className="flex justify-between w-full text-left font-semibold text-sky-900">
-                                   <span>Sante de la femme</span>
+                                   <span className="text-lg">Soin pour la femme</span>
                                    <i className={`ri-arrow-down-line transition duration-200 ${openIndex === 1 ? "rotate-180" : ""}`}></i>
                           </button>
 
