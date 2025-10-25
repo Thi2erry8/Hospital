@@ -4,7 +4,6 @@ import Footer from "../copoments/footer";
 import Option from "../copoments/option";
 import { useState } from "react";
 import Hero from "../copoments/hero";
-import Hero from "../copoments/hero";
 
 export default function Mental(){
   
