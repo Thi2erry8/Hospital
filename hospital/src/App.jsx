@@ -3,6 +3,7 @@ import Apropos from './pages/Apropos'
 import Femme from './pages/femme'
 import Mental from './pages/mental'
 import Tarif from './pages/tarif'
+import Form from './pages/Form'
 import {createBrowserRouter , RouterProvider} from "react-router-dom"
 import './App.css'
 
@@ -26,6 +27,10 @@ import './App.css'
     {
       path:'/tarif',
       element: <Tarif/>
+    },
+    {
+      path:'/form',
+      element: <Form/>
     }
   ])
 
