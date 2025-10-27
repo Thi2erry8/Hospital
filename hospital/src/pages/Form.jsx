@@ -56,16 +56,27 @@ export default function Form() {
                      
                      <form action="">
 
-                            <div className="">
-                                  <input type="text" placeholder='Votre nom' />
-                                  <input type="text" placeholder='Votre prenom' />
+                            <div className="flex flex-col justify-center items-center gap-4 mb-4">
+                                
+                                  <input type="text" placeholder='Votre nom' 
+                                    className=' font-semibold pl-2 text-sky-900 text-lg border border-sky-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-800 focus:border-transparent' 
+                                    required
+                                  />
+                                  <input type="text" placeholder='Votre prenom' 
+                                    className='font-semibold pl-2 text-sky-900 text-lg border border-sky-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-800 focus:border-transparent' 
+                                    required                                  
+                                  />
                             </div>
 
-                            <div className="">
+                            <div className="flex flex-col justify-center items-center gap-4 mb-4">
                                   <input type="email" placeholder='Votre email' 
-                                    
+                                    className='font-semibold pl-2 text-sky-900 text-lg border border-sky-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-800 focus:border-transparent' 
+                                    required
                                   />
-                                  <input type="tel" placeholder='Votre numero' />
+                                  <input type="tel" placeholder='Votre numero' 
+                                    className='font-semibold pl-2 text-sky-900 text-lg border border-sky-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-800 focus:border-transparent' 
+                                    required                                  
+                                  />
                             </div>
                            <div className="">
                                 <DateTime
@@ -74,8 +85,8 @@ export default function Form() {
                                         isValidDate={isValidDate}
                                         isValidTime={isValidTime}
                                         inputProps={{
-                                        placeholder: "Cliquez pour choisir une date et heure",
-                                        className: "w-full border border-gray-300 rounded-lg px-4 py-3 text-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                        placeholder: "date et heure",
+                                        className: "text-center font-semibold text-sky-900 text-lg border border-sky-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-800 focus:border-transparent"
                                         }}
                                         timeFormat="HH:mm"
                                         dateFormat="DD/MM/YYYY"
