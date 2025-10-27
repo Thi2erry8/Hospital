@@ -9,7 +9,7 @@ export default function Form() {
             <section className="min-h-screen w-screen flex justify-center items-center ">
                      <form action="">
                            <div className="">
-                                <input type="datetime-local" name="" id="" />
+                                <input placeholder='Selectionner une date et une heure' type="datetime-local" name="" id="" />
                           </div>
                      </form>
             </section>

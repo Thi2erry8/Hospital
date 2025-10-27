@@ -97,7 +97,7 @@ function Home(){
                                  <div className="flex flex-row w-full justify-between">
                                        <div className="flex flex-row gap-3 border-1 border-sky-200 rounded-md p-2">
                                                <div className=" flex items-center justify-center">
-                                                     <i class="text-2xl ri-phone-line"></i>
+                                                     <i className="text-2xl ri-phone-line"></i>
                                                </div>
 
                                                <div className="flex flex-col gap-2">
@@ -113,7 +113,7 @@ function Home(){
 
                                        <div className="flex flex-row gap-3 border-1 border-sky-200 rounded-md p-2">
                                                <div className=" flex items-center justify-center">
-                                                     <i class="ri-mail-line"></i>
+                                                     <i className="ri-mail-line"></i>
                                                </div>
 
                                                <div className="flex flex-col gap-2">
