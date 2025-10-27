@@ -2,6 +2,7 @@ import React from 'react'
 import Header from "../copoments/header";
 import Footer from "../copoments/footer";
 import Hero from "../copoments/hero";
+import "react-datetime/css/react-datetime.css";
 export default function Form() {
   return (
   <> <Header></Header>
@@ -9,7 +10,9 @@ export default function Form() {
             <section className="min-h-screen w-screen flex justify-center items-center ">
                      <form action="">
                            <div className="">
-                                <input placeholder='Selectionner une date et une heure' type="datetime-local" name="" id="" />
+                                 <DateTimePickerComponent 
+                                      placeholder="Sélectionnez une date et une heure"
+                                />
                           </div>
                      </form>
             </section>
