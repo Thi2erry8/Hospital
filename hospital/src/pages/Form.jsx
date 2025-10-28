@@ -44,7 +44,7 @@ export default function Form() {
     <main className=" pt-[70px]">
             <section className="min-h-screen w-screen  flex flex-col justify-center items-center ">
                      <div className="mb-6">
-                          <h2 className="text-2xl font-bold text-gray-800 mb-2">
+                          <h2 className="text-2xl font-bold text-sky-800 mb-2">
                                Prendre Rendez-vous
                           </h2>
                           <div className="bg-blue-50 p-3 rounded-md">
@@ -53,8 +53,8 @@ export default function Form() {
                                  <p className="text-red-600 font-semibold mt-1">🚫 Fermé le dimanche</p>
                           </div>
                     </div>
-                     
-                     <form action="">
+                       
+                         <form className=' flex flex-col justify-center items-center' action="">
 
                             <div className="flex flex-col justify-center items-center gap-4 mb-4">
                                 
@@ -67,18 +67,19 @@ export default function Form() {
                                     required                                  
                                   />
                             </div>
-
-                            <div className="flex flex-col justify-center items-center gap-4 mb-4">
+                            <hr className='text-gray-400 w-[100px] mx-auto'/>
+                            <div className="flex flex-col justify-center items-center mt-4 gap-4 mb-4">
                                   <input type="email" placeholder='Votre email' 
                                     className='font-semibold pl-2 text-sky-900 text-lg border border-sky-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-800 focus:border-transparent' 
                                     required
                                   />
                                   <input type="tel" placeholder='Votre numero' 
-                                    className='font-semibold pl-2 text-sky-900 text-lg border border-sky-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-800 focus:border-transparent' 
+                                    className='pl-2 font-semibold  text-sky-900 text-lg border border-sky-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-800 focus:border-transparent' 
                                     required                                  
                                   />
                             </div>
-                           <div className="">
+                            <hr className='text-gray-400 w-[100px] mx-auto'/>
+                           <div className="mt-4">
                                 <DateTime
                                         onChange={handleDateChange}
                                         value={appointment}
@@ -86,7 +87,7 @@ export default function Form() {
                                         isValidTime={isValidTime}
                                         inputProps={{
                                         placeholder: "date et heure",
-                                        className: "text-center font-semibold text-sky-900 text-lg border border-sky-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-800 focus:border-transparent"
+                                        className: "pl-2 text-center font-semibold text-sky-900 text-lg border border-sky-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-800 focus:border-transparent"
                                         }}
                                         timeFormat="HH:mm"
                                         dateFormat="DD/MM/YYYY"
@@ -97,8 +98,13 @@ export default function Form() {
                                         closeOnSelect={true}
                                 />
                           </div>
-                     </form>
+                          <button className='bg-sky-900 mx-auto border px-3.5 border-sky-900 rounded mt-4' type="submit">
+                                    <p className='text-sky-50 font-bold'>Envoyer</p>
+                          </button>
+                      </form>
+                     
             </section>
+            
     </main>
     <Footer></Footer>
    </>

@@ -1,5 +1,6 @@
 import pic1 from "../assets/images/header_pic.jpg";
 import Header from "../copoments/header";
+import Hero from "../copoments/hero";
 import Footer from "../copoments/footer";
 import Option from "../copoments/option";
 import { useState } from "react";
