@@ -31,13 +31,7 @@ export default function Form() {
     }
   };
 
-  const getFrenchDayName = (date) => {
-    const days = [
-      'dimanche', 'lundi', 'mardi', 'mercredi', 
-      'jeudi', 'vendredi', 'samedi'
-    ];
-    return days[date.day()];
-  };
+
   {/* 
       */}
 
@@ -69,51 +63,69 @@ export default function Form() {
                           </div>
                     </div>
                        
-                         <form onSubmit={handleSubmit} className=' flex flex-col justify-center items-center' action="">
+                         <form name='formulaire'
+                          action="https://script.google.com/macros/s/AKfycbwfGLizbgBqrg2AVFzhyk8oajrFQDZ3UVHo4kW1gkI-1k9WPM9vapbWtz4O0Pwztcom/exec"
+                          method="POST"
+                           target="hidden_iframe"
+                          className=' flex flex-col justify-center items-center'>
 
                             <div className="flex flex-col justify-center items-center gap-4 mb-4">
                                 
-                                  <input name='nom' type="text" placeholder='Votre nom' 
-                                    className=' font-semibold pl-2 text-sky-900 text-lg border border-sky-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-800 focus:border-transparent' 
+                                  <input name='Nom' type="text" placeholder='Votre nom' 
+                                    className=' font-semibold w-[250px] pl-2 text-sky-900 text-lg border border-sky-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-800 focus:border-transparent' 
                                     required
                                   />
-                                  <input name='prenom' type="text" placeholder='Votre prenom' 
-                                    className='font-semibold pl-2 text-sky-900 text-lg border border-sky-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-800 focus:border-transparent' 
+                                  <input name='Prenom' type="text" placeholder='Votre prenom' 
+                                    className='font-semibold w-[250px] pl-2 text-sky-900 text-lg border border-sky-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-800 focus:border-transparent' 
                                     required                                  
                                   />
                             </div>
                             <hr className='text-gray-400 w-[100px] mx-auto'/>
                             <div className="flex flex-col justify-center items-center mt-4 gap-4 mb-4">
-                                  <input name='email' type="email" placeholder='Votre email' 
-                                    className='font-semibold pl-2 text-sky-900 text-lg border border-sky-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-800 focus:border-transparent' 
+                                  <input name='Email' type="email" placeholder='Votre email' 
+                                    className='font-semibold w-[250px] pl-2 text-sky-900 text-lg border border-sky-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-800 focus:border-transparent' 
                                     required
                                   />
-                                  <input name='numero' type="tel" placeholder='Votre numero' 
-                                    className='pl-2 font-semibold  text-sky-900 text-lg border border-sky-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-800 focus:border-transparent' 
+                                  <input name='Numero' type="tel" placeholder='Votre numero' 
+                                    className='pl-2 w-[250px] font-semibold  text-sky-900 text-lg border border-sky-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-800 focus:border-transparent' 
                                     required                                  
                                   />
                             </div>
                             <hr className='text-gray-400 w-[100px] mx-auto'/>
                            <div className="mt-4">
-                                <DateTime
-                                        onChange={handleDateChange}
-                                        value={appointment}
-                                        isValidDate={isValidDate}
-                                        isValidTime={isValidTime}
-                                        inputProps={{
-                                        placeholder: "date et heure",
-                                        className: "pl-2 text-center font-semibold text-sky-900 text-lg border border-sky-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-800 focus:border-transparent"
-                                        }}
-                                        timeFormat="HH:mm"
-                                        dateFormat="DD/MM/YYYY"
-                                        timeConstraints={{
-                                        hours: { min: 9, max: 17, step: 1 },
-                                        minutes: { min: 0, max: 59, step: 30 } // Pas de 30 minutes
-                                        }}
-                                        closeOnSelect={true}
-                                />
+                                <div className="flex flex-col justify-center items-center gap-4">
+                                  <input
+                                    name="date"
+                                    type="date"
+                                    className="pl-2 font-semibold w-[250px] text-sky-900 text-lg border border-sky-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-800 focus:border-transparent"
+                                    required
+                                  />
+                                  <select
+                                    name="time"
+                                    className="pl-2 font-semibold w-[250px]  text-sky-900 text-lg border border-sky-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-800 focus:border-transparent"
+                                    required
+                                  >
+                                    <option value="">Sélectionnez l'heure</option>
+                                    <option value="09:00">9:00</option>
+                                    <option value="09:30">9:30</option>
+                                    <option value="10:00">10:00</option>
+                                    <option value="10:30">10:30</option>
+                                    <option value="11:00">11:00</option>
+                                    <option value="11:30">11:30</option>
+                                    <option value="12:00">12:00</option>
+                                    <option value="12:30">12:30</option>
+                                    <option value="13:00">13:00</option>
+                                    <option value="13:30">13:30</option>
+                                    <option value="14:00">14:00</option>
+                                    <option value="14:30">14:30</option>
+                                    <option value="15:00">15:00</option>
+                                    <option value="15:30">15:30</option>
+                                    <option value="16:00">16:00</option>
+                                    <option value="16:30">16:30</option>
+                                  </select>
+                                </div>
                           </div>
-                          <button className='bg-sky-900 mx-auto border px-3.5 border-sky-900 rounded mt-4' type="submit">
+                          <button className='bg-sky-900 mx-auto border py-1 px-3.5 border-sky-900 rounded mt-4 cursor-pointer hover:bg-sky-700' type="submit">
                                     <p className='text-sky-50 font-bold'>Envoyer</p>
                           </button>
                       </form>
