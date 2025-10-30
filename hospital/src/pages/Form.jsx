@@ -40,7 +40,8 @@ export default function Form() {
   const formEle = document.querySelector("form");
   const formDatab = new FormData(formEle);
 
-  fetch("https://script.google.com/macros/s/AKfycbxUX4hu2QEQ7r9TwrSo9vAHydDXv4VwtEDUacCifXaEecIH2bWHQSnFWtd9NdNIUVGDdQ/exec", {
+  fetch("https://script.google.com/macros/s/AKfycbwFq1FxXPgUD5XVDqpIoiEajNnkef3OX9duixu0sss1asIJz-X-wwnS_ByYhyuTrK48/exec", 
+    {
     method: "POST",
     mode: "no-cors",
     body: formDatab
