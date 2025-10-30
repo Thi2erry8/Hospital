@@ -38,9 +38,24 @@ export default function Form() {
     ];
     return days[date.day()];
   };
+  {/* 
+      */}
 
+  const handleSubmit = (e)=>{
+    e.preventDefault()
+    const url = "https://script.google.com/macros/s/AKfycbxO4pH9gDFnMJi5jKjbD5CMpk0v-L5tfnCLV7JWPIVmRCRHdHejCwTwQca8S3ZQ7BkI/exec"
+    fetch(url,{
+      method:"POST",
+      headers:{"Content-Type":"application/x-www-form-urlencoded"},
+      body:(`Nom=${e.target.nom.value}&Prenom=${e.target.prenom.value}&Email=${e.target.email.value}&Numero=${e.target.numero.value}&Dat=${appointment ? appointment.format("YYYY-MM-DD HH:mm") : ""}`)
+    }).then(res=>res.text()).then(data=>{
+      alert(data)
+    }).catch(error=>console.log(error))
+  }
   return (
   <> <Header></Header>
+
+    
     <main className=" pt-[70px]">
             <section className="min-h-screen w-screen  flex flex-col justify-center items-center ">
                      <div className="mb-6">
@@ -54,26 +69,26 @@ export default function Form() {
                           </div>
                     </div>
                        
-                         <form className=' flex flex-col justify-center items-center' action="">
+                         <form onSubmit={handleSubmit} className=' flex flex-col justify-center items-center' action="">
 
                             <div className="flex flex-col justify-center items-center gap-4 mb-4">
                                 
-                                  <input type="text" placeholder='Votre nom' 
+                                  <input name='nom' type="text" placeholder='Votre nom' 
                                     className=' font-semibold pl-2 text-sky-900 text-lg border border-sky-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-800 focus:border-transparent' 
                                     required
                                   />
-                                  <input type="text" placeholder='Votre prenom' 
+                                  <input name='prenom' type="text" placeholder='Votre prenom' 
                                     className='font-semibold pl-2 text-sky-900 text-lg border border-sky-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-800 focus:border-transparent' 
                                     required                                  
                                   />
                             </div>
                             <hr className='text-gray-400 w-[100px] mx-auto'/>
                             <div className="flex flex-col justify-center items-center mt-4 gap-4 mb-4">
-                                  <input type="email" placeholder='Votre email' 
+                                  <input name='email' type="email" placeholder='Votre email' 
                                     className='font-semibold pl-2 text-sky-900 text-lg border border-sky-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-800 focus:border-transparent' 
                                     required
                                   />
-                                  <input type="tel" placeholder='Votre numero' 
+                                  <input name='numero' type="tel" placeholder='Votre numero' 
                                     className='pl-2 font-semibold  text-sky-900 text-lg border border-sky-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-800 focus:border-transparent' 
                                     required                                  
                                   />
