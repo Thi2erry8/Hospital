@@ -8,7 +8,7 @@ function Header(){
 
     return(
         <>
-           <header className="w-full bg-sky-50 h-[70px] fixed px-4 py-1 z-10 flex flex-row items-center justify-between">  
+           <header className="w-full bg-sky-100 h-[70px] fixed px-4 py-1 z-10 flex flex-row items-center justify-between">  
                     <div className="h-full"> 
                                      <img src={logo} className="h-full" alt="" />
                     </div>  

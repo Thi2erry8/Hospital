@@ -2,7 +2,7 @@ import logo from  "../assets/images/logo.png";
 
 function Footer(){
        return(
-         <footer className="flex flex-col bg-sky-50 max-h-screen gap-10 py-5 px-5 mt-10">
+         <footer className="flex flex-col bg-sky-100 max-h-screen gap-10 py-5 px-5 mt-10">
                   <div className="">
                          <img width='80px' src={logo} alt="" />
                   </div>

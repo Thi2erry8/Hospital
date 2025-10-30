@@ -35,17 +35,24 @@ export default function Form() {
   {/* 
       */}
 
-  const handleSubmit = (e)=>{
-    e.preventDefault()
-    const url = "https://script.google.com/macros/s/AKfycbxO4pH9gDFnMJi5jKjbD5CMpk0v-L5tfnCLV7JWPIVmRCRHdHejCwTwQca8S3ZQ7BkI/exec"
-    fetch(url,{
-      method:"POST",
-      headers:{"Content-Type":"application/x-www-form-urlencoded"},
-      body:(`Nom=${e.target.nom.value}&Prenom=${e.target.prenom.value}&Email=${e.target.email.value}&Numero=${e.target.numero.value}&Dat=${appointment ? appointment.format("YYYY-MM-DD HH:mm") : ""}`)
-    }).then(res=>res.text()).then(data=>{
-      alert(data)
-    }).catch(error=>console.log(error))
-  }
+  function Submit(e) {
+  e.preventDefault(); // 🚫 Empêche le rechargement
+  const formEle = document.querySelector("form");
+  const formDatab = new FormData(formEle);
+
+  fetch("https://script.google.com/macros/s/AKfycbxUX4hu2QEQ7r9TwrSo9vAHydDXv4VwtEDUacCifXaEecIH2bWHQSnFWtd9NdNIUVGDdQ/exec", {
+    method: "POST",
+    mode: "no-cors",
+    body: formDatab
+  })
+    .then((res) => res.text())
+    .then((data) => {
+      console.log(data);
+      alert("✅ Données envoyées avec succès !");
+    })
+    .catch((error) => console.log(error));
+}
+  
   return (
   <> <Header></Header>
 
@@ -62,12 +69,9 @@ export default function Form() {
                                  <p className="text-red-600 font-semibold mt-1">🚫 Fermé le dimanche</p>
                           </div>
                     </div>
-                       
-                         <form name='formulaire'
-                          action="https://script.google.com/macros/s/AKfycbwfGLizbgBqrg2AVFzhyk8oajrFQDZ3UVHo4kW1gkI-1k9WPM9vapbWtz4O0Pwztcom/exec"
-                          method="POST"
-                           target="hidden_iframe"
-                          className=' flex flex-col justify-center items-center'>
+                       <form name='formulaire'
+                           onSubmit={(e) => Submit(e)}
+                           className=' flex flex-col justify-center items-center'>
 
                             <div className="flex flex-col justify-center items-center gap-4 mb-4">
                                 
@@ -95,13 +99,13 @@ export default function Form() {
                            <div className="mt-4">
                                 <div className="flex flex-col justify-center items-center gap-4">
                                   <input
-                                    name="date"
+                                    name="Date"
                                     type="date"
                                     className="pl-2 font-semibold w-[250px] text-sky-900 text-lg border border-sky-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-800 focus:border-transparent"
                                     required
                                   />
                                   <select
-                                    name="time"
+                                    name="Time"
                                     className="pl-2 font-semibold w-[250px]  text-sky-900 text-lg border border-sky-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-800 focus:border-transparent"
                                     required
                                   >
