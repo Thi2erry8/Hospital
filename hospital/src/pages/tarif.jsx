@@ -1,4 +1,4 @@
-import pic1 from "../assets/images/header_pic.jpg";
+import pic1 from "../assets/images/header_2.jpg";
 import Header from "../copoments/header";
 import Footer from "../copoments/footer";
 import { useState } from "react";

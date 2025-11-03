@@ -5,7 +5,7 @@ export default function Hero({ img, title }) {
         <img className="" src={img} alt="" />
       </div>
       <div className=" text-sky-900 px-3 w-full h-fit">
-        <h1 className="text-4xl font-bold mb-4">{title}</h1>
+        <h1 className="text-4xl font-bold mb-4 md:text-7xl">{title}</h1>
       </div>
     </section>
   );
