@@ -56,7 +56,7 @@ export default function Femme() {
       <main className=" pt-[70px]">
         <Hero img={text.img} title={text.title}></Hero>
 
-        <section className="min-h-screen gap-4 w-screen flex flex-col  pt-3">
+        <section className="min-h-screen gap-4 w-screen flex flex-col  pt-3 md:flex-row md:p-5 md:items-center">
           <div className="flex flex-col text-lg gap-2 w-full text-sky-900 px-2">
             <p>
               À la Clinique de santé M, nous offrons une gamme complète de
