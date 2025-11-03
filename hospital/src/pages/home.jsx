@@ -65,7 +65,7 @@ function Home(){
                  </section>
 
                  {/* Urgences */} 
-                 <section className="w-full min-h-screen flex flex-col-reverse px-2 gap-2 items-center justify-center">
+                 <section className="w-full min-h-screen flex flex-col-reverse px-2 gap-2 items-center justify-around">
                            <div className=" flex flex-col items-start justify-center text-sky-900 gap-2">
                                 
                                  <h2 className="text-2xl font-semibold">Urgence Mineur</h2>
@@ -84,7 +84,7 @@ function Home(){
                  </section>
 
                  {/* Support */} 
-                 <section className="w-full min-h-screen flex flex-col-reverse px-2 gap-2 items-center justify-center">
+                 <section className="w-full min-h-screen flex flex-col-reverse px-2 gap-2 items-center justify-around">
                            <div className=" flex flex-col items-start justify-center text-sky-900 gap-2">
                                 
                                  <h2 className="text-2xl font-semibold">24/7 Support </h2>
